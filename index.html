@@ -6,579 +6,172 @@
   <title>Shore Thing Exterior Cleaning | San Diego, CA</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     :root {
-      --navy: #0a2340;
-      --blue: #1a6fbf;
-      --sky: #4ab8f0;
-      --sand: #f5e9d3;
-      --white: #ffffff;
-      --gray: #f0f4f8;
-      --text: #1a2a3a;
+      --navy: #0a2340; --blue: #1a6fbf; --sky: #4ab8f0;
+      --sand: #f5e9d3; --white: #ffffff; --gray: #f0f4f8; --text: #1a2a3a;
     }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--white); }
 
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      color: var(--text);
-      background: var(--white);
-    }
-
-    /* NAV */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(10, 35, 64, 0.97);
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5%;
-      height: 70px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,35,64,0.97); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 70px; box-shadow: 0 2px 20px rgba(0,0,0,0.3);
     }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-icon {
-      width: 42px;
-      height: 42px;
-    }
-
-    .logo-text {
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 800;
-      line-height: 1.2;
-    }
-
-    .logo-text span {
-      color: var(--sky);
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      transition: color 0.2s;
-    }
-
+    .nav-logo { display: flex; align-items: center; gap: 12px; }
+    .logo-icon { width: 42px; height: 42px; }
+    .logo-text { color: white; font-size: 1.2rem; font-weight: 800; line-height: 1.2; }
+    .logo-text span { color: var(--sky); display: block; font-size: 0.7rem; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.5px; transition: color 0.2s; }
     .nav-links a:hover { color: var(--sky); }
+    .nav-cta { background: var(--sky); color: var(--navy) !important; padding: 9px 20px; border-radius: 25px; font-weight: 700 !important; transition: background 0.2s, transform 0.2s !important; }
+    .nav-cta:hover { background: white !important; color: var(--navy) !important; transform: translateY(-1px); }
 
-    .nav-cta {
-      background: var(--sky);
-      color: var(--navy) !important;
-      padding: 9px 20px;
-      border-radius: 25px;
-      font-weight: 700 !important;
-      transition: background 0.2s, transform 0.2s !important;
-    }
-
-    .nav-cta:hover {
-      background: white !important;
-      color: var(--navy) !important;
-      transform: translateY(-1px);
-    }
-
-    /* HERO */
     .hero {
       min-height: 100vh;
       background: linear-gradient(160deg, var(--navy) 0%, #0d3560 50%, #1a5a8a 100%);
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: 100px 5% 100px;
+      display: flex; align-items: center; position: relative; overflow: hidden; padding: 100px 5% 100px;
     }
-
     .hero::before {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0; right: 0;
-      height: 120px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f0f4f8' fill-opacity='1' d='M0,64L60,56C120,48,240,32,360,40C480,48,600,80,720,82C840,84,960,56,1080,48C1200,40,1320,56,1380,64L1440,72L1440,120L0,120Z'/%3E%3C/svg%3E") no-repeat bottom;
-      background-size: cover;
-      z-index: 1;
+      content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 120px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f5e9d3' fill-opacity='1' d='M0,64L60,56C120,48,240,32,360,40C480,48,600,80,720,82C840,84,960,56,1080,48C1200,40,1320,56,1380,64L1440,72L1440,120L0,120Z'/%3E%3C/svg%3E") no-repeat bottom;
+      background-size: cover; z-index: 1;
     }
-
     .hero::after {
-      content: '';
-      position: absolute;
-      top: 15%;
-      right: 5%;
-      width: 380px;
-      height: 380px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(74,184,240,0.15) 0%, transparent 70%);
-      pointer-events: none;
+      content: ''; position: absolute; top: 15%; right: 5%; width: 380px; height: 380px;
+      border-radius: 50%; background: radial-gradient(circle, rgba(74,184,240,0.15) 0%, transparent 70%); pointer-events: none;
     }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 650px;
-    }
-
+    .hero-content { position: relative; z-index: 2; max-width: 650px; }
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(74,184,240,0.2);
-      border: 1px solid rgba(74,184,240,0.4);
-      color: var(--sky);
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 24px;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(74,184,240,0.2); border: 1px solid rgba(74,184,240,0.4);
+      color: var(--sky); padding: 6px 16px; border-radius: 20px;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px;
     }
-
-    .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      color: white;
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 em {
-      font-style: normal;
-      color: var(--sky);
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: rgba(255,255,255,0.8);
-      line-height: 1.7;
-      margin-bottom: 36px;
-      max-width: 520px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
+    .hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); color: white; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero h1 em { font-style: normal; color: var(--sky); }
+    .hero p { font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 36px; max-width: 520px; }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
     .btn-primary {
-      background: var(--sky);
-      color: var(--navy);
-      padding: 15px 32px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 1rem;
-      transition: all 0.25s;
+      background: var(--sky); color: var(--navy); padding: 15px 32px; border-radius: 30px;
+      text-decoration: none; font-weight: 800; font-size: 1rem; transition: all 0.25s;
       box-shadow: 0 4px 20px rgba(74,184,240,0.4);
     }
-
-    .btn-primary:hover {
-      background: white;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(74,184,240,0.5);
-    }
-
+    .btn-primary:hover { background: white; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(74,184,240,0.5); }
     .btn-secondary {
-      background: transparent;
-      color: white;
-      padding: 15px 32px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-      border: 2px solid rgba(255,255,255,0.4);
-      transition: all 0.25s;
+      background: transparent; color: white; padding: 15px 32px; border-radius: 30px;
+      text-decoration: none; font-weight: 700; font-size: 1rem;
+      border: 2px solid rgba(255,255,255,0.4); transition: all 0.25s;
     }
-
-    .btn-secondary:hover {
-      border-color: white;
-      background: rgba(255,255,255,0.1);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 40px;
-      margin-top: 50px;
-      flex-wrap: wrap;
-    }
-
+    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.1); }
+    .hero-stats { display: flex; gap: 40px; margin-top: 50px; flex-wrap: wrap; }
     .stat { text-align: left; }
+    .stat-num { font-size: 2rem; font-weight: 900; color: var(--sky); line-height: 1; }
+    .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
 
-    .stat-num {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--sky);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.6);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 4px;
-    }
-
-    /* TRUST BAR */
     .trust-bar {
-      background: var(--sand);
-      padding: 20px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
+      background: var(--sand); padding: 20px 5%;
+      display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;
     }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 600; color: var(--navy); }
     .trust-icon { font-size: 1.3rem; }
 
-    /* SERVICES */
-    .services {
-      padding: 90px 5%;
-      background: var(--gray);
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
+    .services { padding: 90px 5%; background: var(--gray); }
+    .section-header { text-align: center; margin-bottom: 56px; }
     .section-tag {
-      display: inline-block;
-      background: rgba(26,111,191,0.12);
-      color: var(--blue);
-      padding: 5px 14px;
-      border-radius: 20px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
+      display: inline-block; background: rgba(26,111,191,0.12); color: var(--blue);
+      padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px;
     }
-
-    .section-header h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 900;
-      color: var(--navy);
-      margin-bottom: 14px;
-    }
-
-    .section-header p {
-      color: #5a7080;
-      font-size: 1.05rem;
-      max-width: 540px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
+    .section-header h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; color: var(--navy); margin-bottom: 14px; }
+    .section-header p { color: #5a7080; font-size: 1.05rem; max-width: 540px; margin: 0 auto; line-height: 1.7; }
 
     .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 24px;
-      max-width: 1200px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 24px; max-width: 1200px; margin: 0 auto;
     }
-
     .service-card {
-      background: white;
-      border-radius: 20px;
-      padding: 36px 30px;
-      box-shadow: 0 4px 20px rgba(10,35,64,0.07);
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
-      cursor: default;
+      background: white; border-radius: 20px; padding: 36px 30px;
+      box-shadow: 0 4px 20px rgba(10,35,64,0.07); transition: all 0.3s;
+      position: relative; overflow: hidden; cursor: default;
     }
-
     .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 4px;
-      height: 100%;
+      content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
       background: linear-gradient(180deg, var(--sky), var(--blue));
-      border-radius: 4px 0 0 4px;
-      transform: scaleY(0);
-      transition: transform 0.3s;
-      transform-origin: top;
+      border-radius: 4px 0 0 4px; transform: scaleY(0); transition: transform 0.3s; transform-origin: top;
     }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 40px rgba(10,35,64,0.14);
-    }
-
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(10,35,64,0.14); }
     .service-card:hover::before { transform: scaleY(1); }
+    .service-emoji { font-size: 2.8rem; margin-bottom: 18px; display: block; }
+    .service-card h3 { font-size: 1.2rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+    .service-card > p { color: #6a7f90; font-size: 0.95rem; line-height: 1.65; margin-bottom: 18px; }
 
-    .service-emoji {
-      font-size: 2.8rem;
-      margin-bottom: 18px;
-      display: block;
+    .service-why {
+      background: linear-gradient(135deg, rgba(74,184,240,0.08), rgba(26,111,191,0.06));
+      border-left: 3px solid var(--sky); border-radius: 0 10px 10px 0; padding: 14px 16px;
+    }
+    .service-why-title {
+      font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 1.2px; color: var(--blue); margin-bottom: 8px;
+    }
+    .service-why p { color: #4a6070; font-size: 0.88rem; line-height: 1.6; margin-bottom: 12px; }
+    .service-frequency {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--navy); color: var(--sky);
+      padding: 5px 13px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;
     }
 
-    .service-card h3 {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      color: #6a7f90;
-      font-size: 0.95rem;
-      line-height: 1.65;
-    }
-
-    /* WHY US */
-    .why-us {
-      padding: 90px 5%;
-      background: white;
-    }
-
-    .why-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
+    .why-us { padding: 90px 5%; background: white; }
+    .why-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .why-visual { position: relative; }
     .why-card-main {
       background: linear-gradient(135deg, var(--navy), #1a5a8a);
-      border-radius: 24px;
-      padding: 40px;
-      color: white;
-      position: relative;
-      overflow: hidden;
+      border-radius: 24px; padding: 40px; color: white; position: relative; overflow: hidden;
     }
-
-    .why-card-main::after {
-      content: '🌊';
-      position: absolute;
-      bottom: -10px;
-      right: 20px;
-      font-size: 7rem;
-      opacity: 0.15;
-    }
-
-    .why-card-main h3 {
-      font-size: 1.5rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-    }
-
-    .why-card-main p {
-      color: rgba(255,255,255,0.8);
-      line-height: 1.7;
-      font-size: 1rem;
-    }
-
+    .why-card-main::after { content: '🌊'; position: absolute; bottom: -10px; right: 20px; font-size: 7rem; opacity: 0.15; }
+    .why-card-main h3 { font-size: 1.5rem; font-weight: 900; margin-bottom: 12px; }
+    .why-card-main p { color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 1rem; }
     .why-floating-badge {
-      position: absolute;
-      bottom: -24px;
-      right: -16px;
-      background: var(--sky);
-      color: var(--navy);
-      border-radius: 16px;
-      padding: 18px 22px;
-      font-weight: 900;
-      font-size: 1.1rem;
-      box-shadow: 0 8px 25px rgba(74,184,240,0.4);
-      text-align: center;
-      line-height: 1.2;
+      position: absolute; bottom: -24px; right: -16px;
+      background: var(--sky); color: var(--navy); border-radius: 16px; padding: 18px 22px;
+      font-weight: 900; font-size: 1.1rem; box-shadow: 0 8px 25px rgba(74,184,240,0.4);
+      text-align: center; line-height: 1.2;
     }
-
-    .why-floating-badge small {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 2px;
-    }
-
-    .why-visual { position: relative; }
-
-    .why-content h2 {
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-      font-weight: 900;
-      color: var(--navy);
-      margin-bottom: 14px;
-      line-height: 1.2;
-    }
-
-    .why-content > p {
-      color: #5a7080;
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
-
-    .why-list {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .why-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-
+    .why-floating-badge small { display: block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+    .why-content h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 900; color: var(--navy); margin-bottom: 14px; line-height: 1.2; }
+    .why-content > p { color: #5a7080; font-size: 1rem; line-height: 1.7; margin-bottom: 30px; }
+    .why-list { display: flex; flex-direction: column; gap: 18px; }
+    .why-item { display: flex; align-items: flex-start; gap: 14px; }
     .why-check {
-      width: 30px;
-      height: 30px;
-      background: linear-gradient(135deg, var(--sky), var(--blue));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 0.85rem;
-      flex-shrink: 0;
-      margin-top: 2px;
+      width: 30px; height: 30px; background: linear-gradient(135deg, var(--sky), var(--blue));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 0.85rem; flex-shrink: 0; margin-top: 2px;
     }
+    .why-item-text strong { display: block; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .why-item-text span { color: #6a7f90; font-size: 0.9rem; }
 
-    .why-item-text strong {
-      display: block;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 3px;
-    }
-
-    .why-item-text span {
-      color: #6a7f90;
-      font-size: 0.9rem;
-    }
-
-    /* CONTACT */
-    .contact {
-      padding: 90px 5%;
-      background: linear-gradient(160deg, var(--navy) 0%, #1a4d7a 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--sky), var(--blue), var(--sky));
-    }
-
-    .contact-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .contact h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      font-weight: 900;
-      color: white;
-      margin-bottom: 14px;
-    }
-
-    .contact > .contact-inner > p {
-      color: rgba(255,255,255,0.75);
-      font-size: 1.05rem;
-      margin-bottom: 50px;
-    }
-
-    .contact-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-bottom: 50px;
-    }
-
+    .contact { padding: 90px 5%; background: linear-gradient(160deg, var(--navy) 0%, #1a4d7a 100%); position: relative; overflow: hidden; }
+    .contact::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--sky), var(--blue), var(--sky)); }
+    .contact-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+    .contact h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: white; margin-bottom: 14px; }
+    .contact > .contact-inner > p { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 50px; }
+    .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 50px; }
     .contact-card {
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 18px;
-      padding: 30px 24px;
-      text-decoration: none;
-      transition: all 0.25s;
+      background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 18px; padding: 30px 24px; text-decoration: none; transition: all 0.25s;
     }
-
-    .contact-card:hover {
-      background: rgba(255,255,255,0.16);
-      transform: translateY(-4px);
-    }
-
-    .contact-card-icon {
-      font-size: 2rem;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .contact-card-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--sky);
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .contact-card-value {
-      color: white;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
+    .contact-card:hover { background: rgba(255,255,255,0.16); transform: translateY(-4px); }
+    .contact-card-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .contact-card-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sky); font-weight: 700; margin-bottom: 6px; }
+    .contact-card-value { color: white; font-weight: 600; font-size: 1rem; }
     .service-area {
-      background: rgba(74,184,240,0.12);
-      border: 1px solid rgba(74,184,240,0.25);
-      border-radius: 14px;
-      padding: 20px 30px;
-      color: rgba(255,255,255,0.8);
-      font-size: 0.95rem;
+      background: rgba(74,184,240,0.12); border: 1px solid rgba(74,184,240,0.25);
+      border-radius: 14px; padding: 20px 30px; color: rgba(255,255,255,0.8); font-size: 0.95rem;
     }
-
     .service-area strong { color: var(--sky); }
 
-    /* FOOTER */
-    footer {
-      background: #050f1a;
-      color: rgba(255,255,255,0.5);
-      text-align: center;
-      padding: 28px 5%;
-      font-size: 0.85rem;
-    }
-
+    footer { background: #050f1a; color: rgba(255,255,255,0.5); text-align: center; padding: 28px 5%; font-size: 0.85rem; }
     footer strong { color: var(--sky); }
 
     @media (max-width: 768px) {
@@ -591,7 +184,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">
     <svg class="logo-icon" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -601,10 +193,7 @@
       <path d="M18 14 L24 14 M21 11 L21 17" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
       <path d="M14 32 Q21 28 28 32" stroke="#4ab8f0" stroke-width="2" stroke-linecap="round" fill="none"/>
     </svg>
-    <div class="logo-text">
-      Shore Thing
-      <span>Exterior Cleaning</span>
-    </div>
+    <div class="logo-text">Shore Thing <span>Exterior Cleaning</span></div>
   </div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
@@ -614,7 +203,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">📍 Serving San Diego, CA</div>
@@ -625,31 +213,20 @@
       <a href="#services" class="btn-secondary">Our Services</a>
     </div>
     <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">5★</div>
-        <div class="stat-label">Rated Service</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Satisfaction</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">SD</div>
-        <div class="stat-label">Locally Owned</div>
-      </div>
+      <div class="stat"><div class="stat-num">5★</div><div class="stat-label">Rated Service</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Satisfaction</div></div>
+      <div class="stat"><div class="stat-num">SD</div><div class="stat-label">Locally Owned</div></div>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
+<!-- TRUST BAR — Licensed & Insured removed -->
 <div class="trust-bar">
-  <div class="trust-item"><span class="trust-icon">✅</span> Licensed & Insured</div>
   <div class="trust-item"><span class="trust-icon">🌿</span> Eco-Friendly Products</div>
   <div class="trust-item"><span class="trust-icon">💧</span> Water-Efficient Methods</div>
   <div class="trust-item"><span class="trust-icon">📅</span> Free Estimates</div>
 </div>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-header">
     <div class="section-tag">What We Do</div>
@@ -657,35 +234,65 @@
     <p>Comprehensive exterior cleaning solutions tailored for San Diego homes and businesses.</p>
   </div>
   <div class="services-grid">
+
     <div class="service-card">
       <span class="service-emoji">☀️</span>
       <h3>Solar Panel Cleaning</h3>
       <p>Dirty panels = lost energy. We safely remove dust, bird droppings, and sea salt buildup to restore maximum efficiency and protect your investment.</p>
+      <div class="service-why">
+        <div class="service-why-title">💡 Why It Matters & How Often</div>
+        <p>Dirty solar panels can lose 15–25% of their energy output. San Diego's coastal air deposits salt and dust quickly, silently cutting into your savings every day. Regular cleaning keeps your system running at peak performance.</p>
+        <span class="service-frequency">🗓 Every 3–6 months</span>
+      </div>
     </div>
+
     <div class="service-card">
       <span class="service-emoji">🍂</span>
       <h3>Gutter Cleaning</h3>
       <p>Clogged gutters can lead to costly water damage. We clear out leaves, debris, and blockages so water flows freely away from your home.</p>
+      <div class="service-why">
+        <div class="service-why-title">💡 Why It Matters & How Often</div>
+        <p>Blocked gutters force water under your roofline, rotting fascia boards and flooding foundations. Even in San Diego's dry climate, wind-blown debris and eucalyptus leaves build up fast and cause serious damage if ignored.</p>
+        <span class="service-frequency">🗓 1–2 times per year</span>
+      </div>
     </div>
+
     <div class="service-card">
       <span class="service-emoji">🪟</span>
       <h3>Window Cleaning</h3>
       <p>Streak-free, crystal-clear windows inside and out. We handle residential and commercial properties of all sizes with professional-grade equipment.</p>
+      <div class="service-why">
+        <div class="service-why-title">💡 Why It Matters & How Often</div>
+        <p>San Diego's ocean breeze deposits salt film and hard water minerals on glass that permanently etch the surface over time. Clean windows also flood your home with natural light and dramatically improve curb appeal.</p>
+        <span class="service-frequency">🗓 Every 2–3 months</span>
+      </div>
     </div>
+
     <div class="service-card">
       <span class="service-emoji">💦</span>
       <h3>Pressure Washing</h3>
       <p>Blast away grime, mold, oil stains, and years of buildup from driveways, decks, patios, fences, and concrete surfaces.</p>
+      <div class="service-why">
+        <div class="service-why-title">💡 Why It Matters & How Often</div>
+        <p>Mold, mildew, and algae make surfaces slippery and dangerous — and they silently eat away at concrete, wood, and stone. Pressure washing restores curb appeal and significantly extends the life of your outdoor surfaces.</p>
+        <span class="service-frequency">🗓 Once or twice a year</span>
+      </div>
     </div>
+
     <div class="service-card">
       <span class="service-emoji">🧼</span>
       <h3>Soft Washing</h3>
       <p>Gentle but powerful low-pressure cleaning for delicate surfaces like roofs, painted siding, stucco, and wood — safe and highly effective.</p>
+      <div class="service-why">
+        <div class="service-why-title">💡 Why It Matters & How Often</div>
+        <p>High-pressure water can crack roof tiles, strip paint, and force moisture behind siding causing rot. Soft washing uses eco-friendly solutions to kill mold, algae, and bacteria at the root for a deeper, longer-lasting clean without any damage.</p>
+        <span class="service-frequency">🗓 Every 1–2 years</span>
+      </div>
     </div>
+
   </div>
 </section>
 
-<!-- WHY US -->
 <section class="why-us" id="why-us">
   <div class="why-inner">
     <div class="why-visual">
@@ -693,10 +300,7 @@
         <h3>San Diego's Trusted Exterior Cleaners</h3>
         <p>We know the coastal environment — salt air, marine layer, and year-round sunshine create unique challenges. We're equipped to handle all of it.</p>
       </div>
-      <div class="why-floating-badge">
-        Shore Thing<br>
-        <small>Exterior Cleaning</small>
-      </div>
+      <div class="why-floating-badge">Shore Thing<br><small>Exterior Cleaning</small></div>
     </div>
     <div class="why-content">
       <div class="section-tag">Why Choose Us</div>
@@ -705,38 +309,25 @@
       <div class="why-list">
         <div class="why-item">
           <div class="why-check">✓</div>
-          <div class="why-item-text">
-            <strong>Coast-Savvy Expertise</strong>
-            <span>We understand San Diego's salt air and UV exposure challenges better than anyone.</span>
-          </div>
+          <div class="why-item-text"><strong>Coast-Savvy Expertise</strong><span>We understand San Diego's salt air and UV exposure challenges better than anyone.</span></div>
         </div>
         <div class="why-item">
           <div class="why-check">✓</div>
-          <div class="why-item-text">
-            <strong>Safe for All Surfaces</strong>
-            <span>From delicate roof tiles to tough concrete — we use the right technique every time.</span>
-          </div>
+          <div class="why-item-text"><strong>Safe for All Surfaces</strong><span>From delicate roof tiles to tough concrete — we use the right technique every time.</span></div>
         </div>
         <div class="why-item">
           <div class="why-check">✓</div>
-          <div class="why-item-text">
-            <strong>Eco-Conscious Cleaning</strong>
-            <span>Biodegradable solutions that are tough on grime but kind to San Diego's environment.</span>
-          </div>
+          <div class="why-item-text"><strong>Eco-Conscious Cleaning</strong><span>Biodegradable solutions that are tough on grime but kind to San Diego's environment.</span></div>
         </div>
         <div class="why-item">
           <div class="why-check">✓</div>
-          <div class="why-item-text">
-            <strong>Transparent Pricing</strong>
-            <span>No hidden fees. Free estimates with honest, upfront quotes before we start.</span>
-          </div>
+          <div class="why-item-text"><strong>Transparent Pricing</strong><span>No hidden fees. Free estimates with honest, upfront quotes before we start.</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="section-tag" style="background:rgba(74,184,240,0.2); color:var(--sky);">Get In Touch</div>
@@ -751,7 +342,7 @@
       <a href="mailto:shorethingexternal@gmail.com" class="contact-card">
         <span class="contact-card-icon">✉️</span>
         <div class="contact-card-label">Email Us</div>
-        <div class="contact-card-value">shorethingexternal<br>@gmail.com</div>
+        <div class="contact-card-value" style="font-size:0.82rem; white-space:nowrap;">shorethingexternal@gmail.com</div>
       </a>
       <div class="contact-card">
         <span class="contact-card-icon">📍</span>
@@ -760,12 +351,11 @@
       </div>
     </div>
     <div class="service-area">
-      <strong>🗺️ Service Area:</strong> Proudly serving San Diego and surrounding communities — from La Jolla to Chula Vista, Oceanside to El Cajon.
+      <strong>🗺️ Service Area:</strong> Proudly serving San Diego and surrounding communities — from Encinitas to Chula Vista.
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2025 <strong>Shore Thing Exterior Cleaning</strong> · San Diego, CA · <a href="tel:8583527067" style="color:var(--sky);">858-352-7067</a> · <a href="mailto:shorethingexternal@gmail.com" style="color:var(--sky);">shorethingexternal@gmail.com</a></p>
 </footer>
@@ -778,6 +368,6 @@
     });
   });
 </script>
-
 </body>
 </html>
+
