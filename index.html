@@ -105,21 +105,20 @@
       align-items: center;
       position: relative;
       overflow: hidden;
-      padding: 100px 5% 60px;
+      padding: 100px 5% 100px;
     }
 
-    /* Animated wave shapes */
     .hero::before {
       content: '';
       position: absolute;
       bottom: -2px;
       left: 0; right: 0;
-      height: 180px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 180'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,96L60,85.3C120,75,240,53,360,64C480,75,600,117,720,117.3C840,117,960,75,1080,64C1200,53,1320,75,1380,85.3L1440,96L1440,180L1380,180C1320,180,1200,180,1080,180C960,180,840,180,720,180C600,180,480,180,360,180C240,180,120,180,60,180L0,180Z'/%3E%3C/svg%3E") no-repeat bottom;
+      height: 120px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f0f4f8' fill-opacity='1' d='M0,64L60,56C120,48,240,32,360,40C480,48,600,80,720,82C840,84,960,56,1080,48C1200,40,1320,56,1380,64L1440,72L1440,120L0,120Z'/%3E%3C/svg%3E") no-repeat bottom;
       background-size: cover;
+      z-index: 1;
     }
 
-    /* Bubble circles decoration */
     .hero::after {
       content: '';
       position: absolute;
@@ -223,9 +222,7 @@
       flex-wrap: wrap;
     }
 
-    .stat {
-      text-align: left;
-    }
+    .stat { text-align: left; }
 
     .stat-num {
       font-size: 2rem;
@@ -262,9 +259,7 @@
       color: var(--navy);
     }
 
-    .trust-icon {
-      font-size: 1.3rem;
-    }
+    .trust-icon { font-size: 1.3rem; }
 
     /* SERVICES */
     .services {
@@ -342,9 +337,7 @@
       box-shadow: 0 16px 40px rgba(10,35,64,0.14);
     }
 
-    .service-card:hover::before {
-      transform: scaleY(1);
-    }
+    .service-card:hover::before { transform: scaleY(1); }
 
     .service-emoji {
       font-size: 2.8rem;
@@ -378,10 +371,6 @@
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
-    }
-
-    .why-visual {
-      position: relative;
     }
 
     .why-card-main {
@@ -438,7 +427,7 @@
       margin-top: 2px;
     }
 
-    .why-content { }
+    .why-visual { position: relative; }
 
     .why-content h2 {
       font-size: clamp(1.7rem, 3vw, 2.4rem);
@@ -579,9 +568,7 @@
       font-size: 0.95rem;
     }
 
-    .service-area strong {
-      color: var(--sky);
-    }
+    .service-area strong { color: var(--sky); }
 
     /* FOOTER */
     footer {
@@ -592,11 +579,8 @@
       font-size: 0.85rem;
     }
 
-    footer strong {
-      color: var(--sky);
-    }
+    footer strong { color: var(--sky); }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -634,7 +618,7 @@
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">📍 Serving San Diego, CA</div>
-    <h1>San Diego's <em>Shore Thing</em> for Exterior Cleaning</h1>
+    <h1><em>Shore Thing</em> Exterior Cleaning</h1>
     <p>From solar panels to gutters, windows to driveways — we make every surface sparkle. Professional, reliable, and built for the California coast.</p>
     <div class="hero-buttons">
       <a href="tel:8583527067" class="btn-primary">📞 Call 858-352-7067</a>
@@ -673,37 +657,31 @@
     <p>Comprehensive exterior cleaning solutions tailored for San Diego homes and businesses.</p>
   </div>
   <div class="services-grid">
-
     <div class="service-card">
       <span class="service-emoji">☀️</span>
       <h3>Solar Panel Cleaning</h3>
       <p>Dirty panels = lost energy. We safely remove dust, bird droppings, and sea salt buildup to restore maximum efficiency and protect your investment.</p>
     </div>
-
     <div class="service-card">
       <span class="service-emoji">🍂</span>
       <h3>Gutter Cleaning</h3>
       <p>Clogged gutters can lead to costly water damage. We clear out leaves, debris, and blockages so water flows freely away from your home.</p>
     </div>
-
     <div class="service-card">
       <span class="service-emoji">🪟</span>
       <h3>Window Cleaning</h3>
       <p>Streak-free, crystal-clear windows inside and out. We handle residential and commercial properties of all sizes with professional-grade equipment.</p>
     </div>
-
     <div class="service-card">
       <span class="service-emoji">💦</span>
       <h3>Pressure Washing</h3>
       <p>Blast away grime, mold, oil stains, and years of buildup from driveways, decks, patios, fences, and concrete surfaces.</p>
     </div>
-
     <div class="service-card">
       <span class="service-emoji">🧼</span>
       <h3>Soft Washing</h3>
       <p>Gentle but powerful low-pressure cleaning for delicate surfaces like roofs, painted siding, stucco, and wood — safe and highly effective.</p>
     </div>
-
   </div>
 </section>
 
@@ -720,7 +698,6 @@
         <small>Exterior Cleaning</small>
       </div>
     </div>
-
     <div class="why-content">
       <div class="section-tag">Why Choose Us</div>
       <h2>The Shore Thing Difference</h2>
@@ -765,7 +742,6 @@
     <div class="section-tag" style="background:rgba(74,184,240,0.2); color:var(--sky);">Get In Touch</div>
     <h2>Ready for a Cleaner Home?</h2>
     <p>Contact us today for a free estimate. We're ready to make your property shine.</p>
-
     <div class="contact-cards">
       <a href="tel:8583527067" class="contact-card">
         <span class="contact-card-icon">📞</span>
@@ -783,7 +759,6 @@
         <div class="contact-card-value">San Diego, CA</div>
       </div>
     </div>
-
     <div class="service-area">
       <strong>🗺️ Service Area:</strong> Proudly serving San Diego and surrounding communities — from La Jolla to Chula Vista, Oceanside to El Cajon.
     </div>
@@ -795,7 +770,6 @@
   <p>© 2025 <strong>Shore Thing Exterior Cleaning</strong> · San Diego, CA · <a href="tel:8583527067" style="color:var(--sky);">858-352-7067</a> · <a href="mailto:shorethingexternal@gmail.com" style="color:var(--sky);">shorethingexternal@gmail.com</a></p>
 </footer>
 
-<!-- Smooth scroll -->
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
@@ -806,5 +780,4 @@
 </script>
 
 </body>
-</html>
 </html>
