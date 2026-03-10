@@ -152,21 +152,8 @@
     }
     .service-link:hover { gap: 10px; }
 
-    /* BEFORE & AFTER */
-    .beforeafter { background: var(--light); border-top: 1px solid var(--border); }
-    .ba-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 16px; }
-    .ba-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .ba-card { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: white; transition: all 0.25s; }
-    .ba-card:hover { box-shadow: 0 12px 40px rgba(10,35,64,0.12); transform: translateY(-3px); }
-    .ba-imgs { display: grid; grid-template-columns: 1fr 1fr; height: 180px; }
-    .ba-imgs img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .ba-imgs img:first-child { border-right: 2px solid white; }
-    .ba-body { padding: 16px 18px; }
-    .ba-body h3 { font-size: 0.95rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
-    .ba-body p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
-
     /* WHY US */
-    .why { background: var(--white); border-top: 1px solid var(--border); }
+    .why { background: var(--light); border-top: 1px solid var(--border); }
     .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto; }
     .why-points { display: flex; flex-direction: column; gap: 22px; margin-top: 24px; }
     .why-point { display: flex; gap: 14px; align-items: flex-start; }
@@ -226,14 +213,14 @@
       .steps { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 900px) {
-      .services-grid, .ba-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
       .why-badge { left: 0; }
       .contact-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .nav-links { display: none; }
-      .services-grid, .ba-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
       .stats-bar { flex-direction: column; }
       .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
       .steps { grid-template-columns: 1fr 1fr; }
@@ -251,7 +238,6 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#how">How It Works</a></li>
-    <li><a href="#results">Results</a></li>
     <li><a href="#why">Why Us</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="tel:8583527067" class="nav-phone">858-352-7067</a></li>
@@ -383,7 +369,7 @@
 
     <div class="service-card">
       <div class="service-img">
-        <img src="images/surfacecleaner1.webp" alt="Pressure Washing San Diego" style="object-position: center 30%;" />
+        <img src="images/surfacecleaner1.webp" alt="Pressure Washing San Diego" style="object-position: center 15%;" />
       </div>
       <div class="service-body">
         <h3>Pressure Washing</h3>
@@ -414,53 +400,6 @@
         <p>Bundle multiple services and save. We handle everything in one visit — leaving your entire property spotless inside and out.</p>
         <div class="service-freq">🗓 Seasonal / As Needed</div>
         <a href="tel:8583527067" class="service-link">Get a Quote →</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- BEFORE & AFTER -->
-<section class="beforeafter" id="results">
-  <div class="ba-header">
-    <div>
-      <span class="section-label">Real Results</span>
-      <h2 class="section-title">Before & After</h2>
-    </div>
-    <p class="section-sub">See the Shore Thing difference for yourself — real jobs, real results from San Diego properties.</p>
-  </div>
-  <div class="ba-grid">
-
-    <div class="ba-card">
-      <div class="ba-imgs">
-        <img src="images/driwaybeforeandafter1.webp" alt="Driveway Before">
-        <img src="images/driwaybeforeandafter2.webp" alt="Driveway After">
-      </div>
-      <div class="ba-body">
-        <h3>Driveway Pressure Washing</h3>
-        <p>Years of oil, grime, and staining blasted away in one visit.</p>
-      </div>
-    </div>
-
-    <div class="ba-card">
-      <div class="ba-imgs">
-        <img src="images/patiobeforeandafter1.webp" alt="Patio Before">
-        <img src="images/patiobeforeandafter2.webp" alt="Patio After">
-      </div>
-      <div class="ba-body">
-        <h3>Patio Cleaning</h3>
-        <p>Mold, algae, and dirt removed — restoring the original surface.</p>
-      </div>
-    </div>
-
-    <div class="ba-card">
-      <div class="ba-imgs">
-        <img src="images/trashcansbeforeandafter1.webp" alt="Trash Cans Before">
-        <img src="images/windowbeforeandafter1.webp" alt="Window After">
-      </div>
-      <div class="ba-body">
-        <h3>General Exterior Cleaning</h3>
-        <p>From trash cans to windows — no surface too dirty for Shore Thing.</p>
       </div>
     </div>
 
