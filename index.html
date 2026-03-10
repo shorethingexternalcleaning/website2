@@ -134,15 +134,16 @@
     .service-img {
       height: 180px; background: linear-gradient(135deg, #c8dff0, #a8c8e8);
       display: flex; align-items: center; justify-content: center; font-size: 3.5rem;
+      overflow: hidden;
     }
+    .service-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .service-body { padding: 22px; }
     .service-body h3 { font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
     .service-body p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin-bottom: 14px; }
     .service-freq {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--light); border: 1px solid var(--border);
+      display: inline-block; background: var(--light); border: 1px solid var(--border);
       color: var(--navy); padding: 5px 12px; border-radius: 3px;
-      font-size: 0.75rem; font-weight: 700; margin-bottom: 14px; display: block; width: fit-content;
+      font-size: 0.75rem; font-weight: 700; margin-bottom: 14px;
     }
     .service-link {
       display: inline-flex; align-items: center; gap: 6px;
@@ -358,7 +359,9 @@
     </div>
 
     <div class="service-card">
-      <div class="service-img">🪟</div>
+      <div class="service-img" style="padding:0;">
+        <img src="images/windowclean1.webp" alt="Window Cleaning San Diego" />
+      </div>
       <div class="service-body">
         <h3>Window Cleaning</h3>
         <p>Streak-free, crystal-clear windows inside and out. We remove the salt film and mineral deposits that permanently etch glass over time.</p>
@@ -378,7 +381,9 @@
     </div>
 
     <div class="service-card">
-      <div class="service-img">🧼</div>
+      <div class="service-img" style="padding:0;">
+        <img src="images/softwash1.webp" alt="Soft Washing San Diego" />
+      </div>
       <div class="service-body">
         <h3>Soft Washing</h3>
         <p>Low-pressure cleaning for roofs, siding, stucco, and wood. Kills mold and algae at the root without damaging delicate surfaces.</p>
