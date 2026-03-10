@@ -156,18 +156,11 @@
     .beforeafter { background: var(--light); border-top: 1px solid var(--border); }
     .ba-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 16px; }
     .ba-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .ba-card { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: white; }
-    .ba-card:hover { box-shadow: 0 12px 40px rgba(10,35,64,0.12); transform: translateY(-3px); transition: all 0.25s; }
+    .ba-card { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: white; transition: all 0.25s; }
+    .ba-card:hover { box-shadow: 0 12px 40px rgba(10,35,64,0.12); transform: translateY(-3px); }
     .ba-imgs { display: grid; grid-template-columns: 1fr 1fr; height: 180px; }
     .ba-imgs img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .ba-imgs img:first-child { border-right: 2px solid white; }
-    .ba-label { display: grid; grid-template-columns: 1fr 1fr; }
-    .ba-tag {
-      padding: 6px 10px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
-      letter-spacing: 1px; text-align: center;
-    }
-    .ba-tag.before { background: #334155; color: white; }
-    .ba-tag.after { background: var(--blue); color: white; }
     .ba-body { padding: 16px 18px; }
     .ba-body h3 { font-size: 0.95rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
     .ba-body p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
@@ -390,7 +383,7 @@
 
     <div class="service-card">
       <div class="service-img">
-        <img src="images/surfacecleaner1.webp" alt="Pressure Washing San Diego" />
+        <img src="images/surfacecleaner1.webp" alt="Pressure Washing San Diego" style="object-position: center 30%;" />
       </div>
       <div class="service-body">
         <h3>Pressure Washing</h3>
@@ -440,12 +433,8 @@
 
     <div class="ba-card">
       <div class="ba-imgs">
-        <img src="images/driwaybeforeandafter1.webp" alt="Driveway Before" onerror="this.src='images/driwaybeforeandafter1.webp'">
-        <img src="images/driwaybeforeandafter2.webp" alt="Driveway After" onerror="this.src='images/driwaybeforeandafter2.webp'">
-      </div>
-      <div class="ba-label">
-        <div class="ba-tag before">Before</div>
-        <div class="ba-tag after">After</div>
+        <img src="images/driwaybeforeandafter1.webp" alt="Driveway Before">
+        <img src="images/driwaybeforeandafter2.webp" alt="Driveway After">
       </div>
       <div class="ba-body">
         <h3>Driveway Pressure Washing</h3>
@@ -458,10 +447,6 @@
         <img src="images/patiobeforeandafter1.webp" alt="Patio Before">
         <img src="images/patiobeforeandafter2.webp" alt="Patio After">
       </div>
-      <div class="ba-label">
-        <div class="ba-tag before">Before</div>
-        <div class="ba-tag after">After</div>
-      </div>
       <div class="ba-body">
         <h3>Patio Cleaning</h3>
         <p>Mold, algae, and dirt removed — restoring the original surface.</p>
@@ -472,10 +457,6 @@
       <div class="ba-imgs">
         <img src="images/trashcansbeforeandafter1.webp" alt="Trash Cans Before">
         <img src="images/windowbeforeandafter1.webp" alt="Window After">
-      </div>
-      <div class="ba-label">
-        <div class="ba-tag before">Before</div>
-        <div class="ba-tag after">After</div>
       </div>
       <div class="ba-body">
         <h3>General Exterior Cleaning</h3>
